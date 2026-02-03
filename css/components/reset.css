@@ -1,0 +1,82 @@
+/* reset.css — baseado no "modern CSS reset" de Andy Bell
+   Fonte de inspiração: https://andy-bell.co.uk/
+
+   Objetivo: remover estilos do navegador e fornecer valores base
+   leves e acessíveis para começar o design.
+*/
+
+:root {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Box sizing em todos os elementos */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove estilos nativos de elementos não-semânticos, mantendo o display padrão */
+:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  color: #000;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* Foco visível acessível (pode ser substituído por estilos do projeto) */
+:focus {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+/* Remover o destaque em toques no mobile */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
